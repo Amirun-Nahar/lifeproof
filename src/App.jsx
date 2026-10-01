@@ -25,9 +25,9 @@ export default function App() {
   const [user, setUser] = useState(() => {
     const saved = localStorage.getItem('lifeproof_auth_user');
     return saved ? JSON.parse(saved) : {
-      name: 'Farhan Hamim',
-      email: 'farhanhamim2001@gmail.com',
-      avatar: 'F',
+      name: 'Nahar',
+      email: 'naharamina68@gmail.com',
+      avatar: 'N',
       role: 'Owner'
     };
   });
@@ -165,14 +165,14 @@ export default function App() {
     } else {
       const naharUser = {
         name: 'Nahar',
-        email: 'nahar@lifeproof.io',
+        email: 'naharamina68@gmail.com',
         avatar: 'N',
-        role: 'Co-Owner',
+        role: 'Owner',
         loginTime: new Date().toLocaleTimeString()
       };
       setUser(naharUser);
       localStorage.setItem('lifeproof_auth_user', JSON.stringify(naharUser));
-      showToast('Switched Profile', 'Active user is now Nahar (Co-Owner)');
+      showToast('Switched Profile', 'Active user is now Nahar (Owner)');
     }
   };
 

@@ -160,7 +160,67 @@ export default function AccountProfileModal({
             </div>
 
             <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
-              {/* Farhan Hamim */}
+              {/* Nahar (Owner) */}
+              <div style={{
+                padding: '8px 10px',
+                borderRadius: 10,
+                background: user.email === 'naharamina68@gmail.com' ? 'var(--primary-subtle)' : 'var(--bg-input)',
+                border: '1px solid ' + (user.email === 'naharamina68@gmail.com' ? 'var(--primary)' : 'var(--border-subtle)'),
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'space-between'
+              }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+                  <div style={{
+                    width: 28,
+                    height: 28,
+                    borderRadius: 8,
+                    background: 'linear-gradient(135deg, #10B981, #06B6D4)',
+                    color: '#fff',
+                    fontSize: 12,
+                    fontWeight: 700,
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center'
+                  }}>
+                    N
+                  </div>
+                  <div>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
+                      <span style={{ fontSize: 12, fontWeight: 700, color: 'var(--text-primary)' }}>
+                        Nahar
+                      </span>
+                      <span style={{ fontSize: 9, fontWeight: 700, color: 'var(--primary)', background: 'rgba(108, 99, 255, 0.12)', padding: '1px 5px', borderRadius: 4 }}>
+                        Owner
+                      </span>
+                    </div>
+                    <div style={{ fontSize: 10, color: 'var(--text-muted)' }}>
+                      naharamina68@gmail.com
+                    </div>
+                  </div>
+                </div>
+
+                {user.email === 'naharamina68@gmail.com' ? (
+                  <span className="badge badge-success" style={{ fontSize: 9 }}>Current</span>
+                ) : (
+                  <button
+                    onClick={() => onSwitchUser && onSwitchUser('nahar')}
+                    style={{
+                      fontSize: 11,
+                      fontWeight: 600,
+                      color: 'var(--primary)',
+                      background: 'var(--primary-subtle)',
+                      border: '1px solid var(--primary)',
+                      padding: '3px 8px',
+                      borderRadius: 6
+                    }}
+                  >
+                    Switch
+                  </button>
+                )}
+              </div>
+
+              {/* Farhan Hamim (Co-Owner) */}
               <div style={{
                 padding: '8px 10px',
                 borderRadius: 10,
@@ -186,8 +246,13 @@ export default function AccountProfileModal({
                     F
                   </div>
                   <div>
-                    <div style={{ fontSize: 12, fontWeight: 700, color: 'var(--text-primary)' }}>
-                      Farhan Hamim
+                    <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
+                      <span style={{ fontSize: 12, fontWeight: 700, color: 'var(--text-primary)' }}>
+                        Farhan Hamim
+                      </span>
+                      <span style={{ fontSize: 9, fontWeight: 700, color: 'var(--accent-cyan)', background: 'rgba(6, 182, 212, 0.12)', padding: '1px 5px', borderRadius: 4 }}>
+                        Co-Owner
+                      </span>
                     </div>
                     <div style={{ fontSize: 10, color: 'var(--text-muted)' }}>
                       farhanhamim2001@gmail.com
@@ -206,61 +271,6 @@ export default function AccountProfileModal({
                       color: 'var(--accent-cyan)',
                       background: 'rgba(6, 182, 212, 0.1)',
                       border: '1px solid rgba(6, 182, 212, 0.25)',
-                      padding: '3px 8px',
-                      borderRadius: 6
-                    }}
-                  >
-                    Switch
-                  </button>
-                )}
-              </div>
-
-              {/* Nahar */}
-              <div style={{
-                padding: '8px 10px',
-                borderRadius: 10,
-                background: user.email === 'nahar@lifeproof.io' ? 'var(--primary-subtle)' : 'var(--bg-input)',
-                border: '1px solid ' + (user.email === 'nahar@lifeproof.io' ? 'var(--primary)' : 'var(--border-subtle)'),
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'space-between'
-              }}>
-                <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-                  <div style={{
-                    width: 28,
-                    height: 28,
-                    borderRadius: 8,
-                    background: 'linear-gradient(135deg, #10B981, #06B6D4)',
-                    color: '#fff',
-                    fontSize: 12,
-                    fontWeight: 700,
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center'
-                  }}>
-                    N
-                  </div>
-                  <div>
-                    <div style={{ fontSize: 12, fontWeight: 700, color: 'var(--text-primary)' }}>
-                      Nahar
-                    </div>
-                    <div style={{ fontSize: 10, color: 'var(--text-muted)' }}>
-                      nahar@lifeproof.io
-                    </div>
-                  </div>
-                </div>
-
-                {user.email === 'nahar@lifeproof.io' ? (
-                  <span className="badge badge-success" style={{ fontSize: 9 }}>Current</span>
-                ) : (
-                  <button
-                    onClick={() => onSwitchUser && onSwitchUser('nahar')}
-                    style={{
-                      fontSize: 11,
-                      fontWeight: 600,
-                      color: 'var(--primary)',
-                      background: 'var(--primary-subtle)',
-                      border: '1px solid var(--primary)',
                       padding: '3px 8px',
                       borderRadius: 6
                     }}

@@ -26,19 +26,19 @@ export default function AuthModal({
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
-      const isFarhan = email.toLowerCase().includes('farhanhamim2001@gmail.com');
-      const isNahar = email.toLowerCase().includes('nahar');
-      const displayName = isFarhan
-        ? 'Farhan Hamim'
-        : isNahar
+      const isFarhan = email.toLowerCase().includes('farhanhamim2001@gmail.com') || email.toLowerCase().includes('farhan');
+      const isNahar = email.toLowerCase().includes('naharamina68@gmail.com') || email.toLowerCase().includes('nahar');
+      const displayName = isNahar
         ? 'Nahar'
+        : isFarhan
+        ? 'Farhan Hamim'
         : name.trim() || email.split('@')[0];
 
       const authUser = {
         name: displayName.charAt(0).toUpperCase() + displayName.slice(1),
-        email: email.trim(),
+        email: isNahar ? 'naharamina68@gmail.com' : isFarhan ? 'farhanhamim2001@gmail.com' : email.trim(),
         avatar: (displayName ? displayName.charAt(0) : email.charAt(0)).toUpperCase(),
-        role: isFarhan || isNahar ? 'Co-Owner' : 'Owner',
+        role: isNahar ? 'Owner' : isFarhan ? 'Co-Owner' : 'Member',
         loginTime: new Date().toLocaleTimeString()
       };
       onLoginSuccess(authUser);
@@ -62,9 +62,9 @@ export default function AuthModal({
       } else if (type === 'nahar') {
         authUser = {
           name: 'Nahar',
-          email: 'nahar@lifeproof.io',
+          email: 'naharamina68@gmail.com',
           avatar: 'N',
-          role: 'Co-Owner',
+          role: 'Owner',
           loginTime: new Date().toLocaleTimeString()
         };
       } else if (type === 'judge') {
@@ -132,24 +132,6 @@ export default function AuthModal({
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 6 }}>
               <button
                 type="button"
-                onClick={() => handleQuickLogin('farhan')}
-                className="btn-secondary"
-                style={{
-                  padding: '8px 8px',
-                  fontSize: 11,
-                  borderRadius: 10,
-                  justifyContent: 'center',
-                  background: 'rgba(6, 182, 212, 0.1)',
-                  borderColor: 'var(--accent-cyan)',
-                  color: 'var(--accent-cyan)',
-                  fontWeight: 700
-                }}
-              >
-                👑 Farhan Hamim (Owner)
-              </button>
-
-              <button
-                type="button"
                 onClick={() => handleQuickLogin('nahar')}
                 className="btn-secondary"
                 style={{
@@ -164,6 +146,24 @@ export default function AuthModal({
                 }}
               >
                 👑 Nahar (Owner)
+              </button>
+
+              <button
+                type="button"
+                onClick={() => handleQuickLogin('farhan')}
+                className="btn-secondary"
+                style={{
+                  padding: '8px 8px',
+                  fontSize: 11,
+                  borderRadius: 10,
+                  justifyContent: 'center',
+                  background: 'rgba(6, 182, 212, 0.1)',
+                  borderColor: 'var(--accent-cyan)',
+                  color: 'var(--accent-cyan)',
+                  fontWeight: 700
+                }}
+              >
+                👑 Farhan Hamim (Co-Owner)
               </button>
 
               <button
