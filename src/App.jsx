@@ -163,16 +163,16 @@ export default function App() {
       localStorage.setItem('lifeproof_auth_user', JSON.stringify(farhanUser));
       showToast('Switched Profile', 'Active user is now Farhan Hamim (Co-Owner)');
     } else {
-      const memberUser = {
-        name: 'Team Vault',
-        email: 'vault@lifeproof.io',
-        avatar: 'V',
+      const naharUser = {
+        name: 'Nahar',
+        email: 'nahar@lifeproof.io',
+        avatar: 'N',
         role: 'Co-Owner',
         loginTime: new Date().toLocaleTimeString()
       };
-      setUser(memberUser);
-      localStorage.setItem('lifeproof_auth_user', JSON.stringify(memberUser));
-      showToast('Switched Profile', 'Active user is now Team Vault (Co-Owner)');
+      setUser(naharUser);
+      localStorage.setItem('lifeproof_auth_user', JSON.stringify(naharUser));
+      showToast('Switched Profile', 'Active user is now Nahar (Co-Owner)');
     }
   };
 

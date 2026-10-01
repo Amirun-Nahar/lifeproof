@@ -215,12 +215,12 @@ export default function AccountProfileModal({
                 )}
               </div>
 
-              {/* Team Vault */}
+              {/* Nahar */}
               <div style={{
                 padding: '8px 10px',
                 borderRadius: 10,
-                background: user.email === 'vault@lifeproof.io' ? 'var(--primary-subtle)' : 'var(--bg-input)',
-                border: '1px solid ' + (user.email === 'vault@lifeproof.io' ? 'var(--primary)' : 'var(--border-subtle)'),
+                background: user.email === 'nahar@lifeproof.io' ? 'var(--primary-subtle)' : 'var(--bg-input)',
+                border: '1px solid ' + (user.email === 'nahar@lifeproof.io' ? 'var(--primary)' : 'var(--border-subtle)'),
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'space-between'
@@ -238,23 +238,23 @@ export default function AccountProfileModal({
                     alignItems: 'center',
                     justifyContent: 'center'
                   }}>
-                    V
+                    N
                   </div>
                   <div>
                     <div style={{ fontSize: 12, fontWeight: 700, color: 'var(--text-primary)' }}>
-                      Team Vault
+                      Nahar
                     </div>
                     <div style={{ fontSize: 10, color: 'var(--text-muted)' }}>
-                      vault@lifeproof.io
+                      nahar@lifeproof.io
                     </div>
                   </div>
                 </div>
 
-                {user.email === 'vault@lifeproof.io' ? (
+                {user.email === 'nahar@lifeproof.io' ? (
                   <span className="badge badge-success" style={{ fontSize: 9 }}>Current</span>
                 ) : (
                   <button
-                    onClick={() => onSwitchUser && onSwitchUser('vault')}
+                    onClick={() => onSwitchUser && onSwitchUser('nahar')}
                     style={{
                       fontSize: 11,
                       fontWeight: 600,

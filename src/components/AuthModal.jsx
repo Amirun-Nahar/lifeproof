@@ -27,15 +27,18 @@ export default function AuthModal({
     setTimeout(() => {
       setLoading(false);
       const isFarhan = email.toLowerCase().includes('farhanhamim2001@gmail.com');
+      const isNahar = email.toLowerCase().includes('nahar');
       const displayName = isFarhan
         ? 'Farhan Hamim'
+        : isNahar
+        ? 'Nahar'
         : name.trim() || email.split('@')[0];
 
       const authUser = {
         name: displayName.charAt(0).toUpperCase() + displayName.slice(1),
         email: email.trim(),
         avatar: (displayName ? displayName.charAt(0) : email.charAt(0)).toUpperCase(),
-        role: isFarhan ? 'Co-Owner' : 'Owner',
+        role: isFarhan || isNahar ? 'Co-Owner' : 'Owner',
         loginTime: new Date().toLocaleTimeString()
       };
       onLoginSuccess(authUser);
@@ -56,11 +59,11 @@ export default function AuthModal({
           role: 'Co-Owner',
           loginTime: new Date().toLocaleTimeString()
         };
-      } else if (type === 'vault') {
+      } else if (type === 'nahar') {
         authUser = {
-          name: 'Team Vault',
-          email: 'vault@lifeproof.io',
-          avatar: 'V',
+          name: 'Nahar',
+          email: 'nahar@lifeproof.io',
+          avatar: 'N',
           role: 'Co-Owner',
           loginTime: new Date().toLocaleTimeString()
         };
@@ -147,7 +150,7 @@ export default function AuthModal({
 
               <button
                 type="button"
-                onClick={() => handleQuickLogin('vault')}
+                onClick={() => handleQuickLogin('nahar')}
                 className="btn-secondary"
                 style={{
                   padding: '8px 8px',
@@ -160,7 +163,7 @@ export default function AuthModal({
                   fontWeight: 700
                 }}
               >
-                🔐 Team Vault
+                👑 Nahar (Owner)
               </button>
 
               <button

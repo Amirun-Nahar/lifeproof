@@ -2,7 +2,7 @@
 > **Your personal memory for the things you own.**  
 > *Capture it. Track it. Prove it.*
 
-🌐 **Live Deployed App:** [https://fractal-fog-597xnpb.shipstatic.com](https://fractal-fog-597xnpb.shipstatic.com)  
+🌐 **Live Deployed App:** [https://unveiled-zone-dt9t9u4.shipstatic.com](https://unveiled-zone-dt9t9u4.shipstatic.com)  
 📱 **Responsive View:** Supports iPhone 16 Pro mockup frame and full desktop view.
 
 ---
@@ -57,5 +57,5 @@ http://localhost:5173/
 
 ## 👥 Project Team & Partners
 - **Farhan Hamim** ([@FarhanHamim](https://github.com/FarhanHamim)) — Project Partner, Co-Owner & Product Design
-- **LIFEProof Core Architecture Team** — Full-Stack & AI Vision Engineering
+- **Nahar** — Co-Owner, Lead Architecture & Engineering
 
