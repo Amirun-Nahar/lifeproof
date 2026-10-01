@@ -2,7 +2,8 @@
 > **Your personal memory for the things you own.**  
 > *Capture it. Track it. Prove it.*
 
-LifeProof uses AI and camera vision to create a visual history of your belongings, spaces, documents, warranties, and condition changes—so you always know what happened, when it happened, and what changed.
+🌐 **Live Deployed App:** [https://amirun-nahar.github.io/lifeproof/](https://amirun-nahar.github.io/lifeproof/)  
+📱 **Responsive View:** Supports iPhone 16 Pro mockup frame and full desktop view.
 
 ---
 
