@@ -2,7 +2,7 @@
 > **Your personal memory for the things you own.**  
 > *Capture it. Track it. Prove it.*
 
-🌐 **Live Deployed App:** [https://amirun-nahar.github.io/lifeproof/](https://amirun-nahar.github.io/lifeproof/)  
+🌐 **Live Deployed App:** [https://fractal-fog-597xnpb.shipstatic.com](https://fractal-fog-597xnpb.shipstatic.com)  
 📱 **Responsive View:** Supports iPhone 16 Pro mockup frame and full desktop view.
 
 ---
@@ -56,6 +56,6 @@ http://localhost:5173/
 ---
 
 ## 👥 Project Team & Partners
-- **Amirun Nahar** ([@Amirun-Nahar](https://github.com/Amirun-Nahar)) — Lead Developer & Architecture
 - **Farhan Hamim** ([@FarhanHamim](https://github.com/FarhanHamim)) — Project Partner, Co-Owner & Product Design
+- **LIFEProof Core Architecture Team** — Full-Stack & AI Vision Engineering
 

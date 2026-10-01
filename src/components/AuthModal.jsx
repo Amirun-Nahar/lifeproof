@@ -27,18 +27,15 @@ export default function AuthModal({
     setTimeout(() => {
       setLoading(false);
       const isFarhan = email.toLowerCase().includes('farhanhamim2001@gmail.com');
-      const isNahar = email.toLowerCase().includes('nahar');
       const displayName = isFarhan
         ? 'Farhan Hamim'
-        : isNahar
-        ? 'Nahar'
         : name.trim() || email.split('@')[0];
 
       const authUser = {
         name: displayName.charAt(0).toUpperCase() + displayName.slice(1),
         email: email.trim(),
         avatar: (displayName ? displayName.charAt(0) : email.charAt(0)).toUpperCase(),
-        role: isFarhan || isNahar ? 'Co-Owner' : 'Owner',
+        role: isFarhan ? 'Co-Owner' : 'Owner',
         loginTime: new Date().toLocaleTimeString()
       };
       onLoginSuccess(authUser);
@@ -59,11 +56,11 @@ export default function AuthModal({
           role: 'Co-Owner',
           loginTime: new Date().toLocaleTimeString()
         };
-      } else if (type === 'nahar') {
+      } else if (type === 'vault') {
         authUser = {
-          name: 'Nahar',
-          email: 'nahar@lifeproof.io',
-          avatar: 'N',
+          name: 'Team Vault',
+          email: 'vault@lifeproof.io',
+          avatar: 'V',
           role: 'Co-Owner',
           loginTime: new Date().toLocaleTimeString()
         };
@@ -150,7 +147,7 @@ export default function AuthModal({
 
               <button
                 type="button"
-                onClick={() => handleQuickLogin('nahar')}
+                onClick={() => handleQuickLogin('vault')}
                 className="btn-secondary"
                 style={{
                   padding: '8px 8px',
@@ -163,7 +160,7 @@ export default function AuthModal({
                   fontWeight: 700
                 }}
               >
-                👑 Nahar (Owner)
+                🔐 Team Vault
               </button>
 
               <button
@@ -245,7 +242,7 @@ export default function AuthModal({
                   <User size={15} style={{ position: 'absolute', left: 12, top: 12, color: 'var(--text-muted)' }} />
                   <input
                     type="text"
-                    placeholder="Nahar"
+                    placeholder="e.g. Farhan Hamim"
                     value={name}
                     onChange={(e) => setName(e.target.value)}
                     style={{

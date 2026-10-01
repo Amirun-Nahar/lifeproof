@@ -25,9 +25,9 @@ export default function App() {
   const [user, setUser] = useState(() => {
     const saved = localStorage.getItem('lifeproof_auth_user');
     return saved ? JSON.parse(saved) : {
-      name: 'Nahar',
-      email: 'nahar@lifeproof.io',
-      avatar: 'N',
+      name: 'Farhan Hamim',
+      email: 'farhanhamim2001@gmail.com',
+      avatar: 'F',
       role: 'Owner'
     };
   });
@@ -163,16 +163,16 @@ export default function App() {
       localStorage.setItem('lifeproof_auth_user', JSON.stringify(farhanUser));
       showToast('Switched Profile', 'Active user is now Farhan Hamim (Co-Owner)');
     } else {
-      const naharUser = {
-        name: 'Nahar',
-        email: 'nahar@lifeproof.io',
-        avatar: 'N',
+      const memberUser = {
+        name: 'Team Vault',
+        email: 'vault@lifeproof.io',
+        avatar: 'V',
         role: 'Co-Owner',
         loginTime: new Date().toLocaleTimeString()
       };
-      setUser(naharUser);
-      localStorage.setItem('lifeproof_auth_user', JSON.stringify(naharUser));
-      showToast('Switched Profile', 'Active user is now Nahar (Co-Owner)');
+      setUser(memberUser);
+      localStorage.setItem('lifeproof_auth_user', JSON.stringify(memberUser));
+      showToast('Switched Profile', 'Active user is now Team Vault (Co-Owner)');
     }
   };
 
@@ -205,11 +205,11 @@ export default function App() {
   // Filter items if searching
   const displayedItems = searchQuery.trim()
     ? items.filter((it) =>
-        it.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        it.category.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        (it.room && it.room.toLowerCase().includes(searchQuery.toLowerCase())) ||
-        (it.warrantyStatus && it.warrantyStatus.toLowerCase().includes(searchQuery.toLowerCase()))
-      )
+      it.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      it.category.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      (it.room && it.room.toLowerCase().includes(searchQuery.toLowerCase())) ||
+      (it.warrantyStatus && it.warrantyStatus.toLowerCase().includes(searchQuery.toLowerCase()))
+    )
     : items;
 
   return (
@@ -278,7 +278,7 @@ export default function App() {
             searchQuery={searchQuery}
             setSearchQuery={setSearchQuery}
             notifications={notifications}
-            onOpenNotifications={() => {}}
+            onOpenNotifications={() => { }}
             isPro={isPro}
             onOpenPaywall={() => setIsPaywallOpen(true)}
             onOpenItem={(id) => setSelectedItemId(id)}
