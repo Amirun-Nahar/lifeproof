@@ -2,7 +2,7 @@
 > **Your personal memory for the things you own.**  
 > *Capture it. Track it. Prove it.*
 
-🌐 **Live Deployed App:** [https://refined-byte-9x65t54.shipstatic.com](https://refined-byte-9x65t54.shipstatic.com)  
+🌐 **Live Deployed App:** [https://heckathon/lifeproof/](https://heckathon/lifeproof/)  
 📱 **Responsive View:** Supports iPhone 16 Pro mockup frame and full desktop view.
 
 ---
