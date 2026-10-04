@@ -1,5 +1,5 @@
 import React from 'react';
-import { Play, Sparkles, Clock, SplitSquareVertical, MessageSquareText, FileText, ShieldAlert, Smartphone, Monitor } from 'lucide-react';
+import { Play, Sparkles, Clock, SplitSquareVertical, MessageSquareText, FileText, Crown, Smartphone, Monitor } from 'lucide-react';
 import LifeProofLogo from './LifeProofLogo';
 
 export default function DemoWalkthroughBar({
@@ -7,7 +7,8 @@ export default function DemoWalkthroughBar({
   currentStep,
   isDesktopView,
   setIsDesktopView,
-  onOpenClaim,
+  isPro,
+  onOpenPaywall,
   onOpenSettings
 }) {
   const steps = [
@@ -17,7 +18,7 @@ export default function DemoWalkthroughBar({
     { id: 'timeline', label: '4. Visual Timeline', icon: Clock },
     { id: 'ask', label: '5. Ask My Stuff', icon: MessageSquareText },
     { id: 'report', label: '6. Evidence Report', icon: FileText },
-    { id: 'claim', label: '7. Claim Dispatcher ⚖️', icon: ShieldAlert }
+    { id: 'paywall', label: '7. RevenueCat Pro', icon: Crown }
   ];
 
   return (
@@ -68,14 +69,14 @@ export default function DemoWalkthroughBar({
         <button
           className="icon-btn-pill"
           style={{
-            background: 'linear-gradient(135deg, rgba(239, 68, 68, 0.15), rgba(245, 158, 11, 0.15))',
-            borderColor: 'var(--danger)',
-            color: 'var(--danger)'
+            background: isPro ? 'linear-gradient(135deg, rgba(34, 197, 94, 0.2), rgba(6, 182, 212, 0.2))' : 'var(--primary-subtle)',
+            borderColor: isPro ? 'var(--success)' : 'var(--primary)',
+            color: isPro ? 'var(--success)' : 'var(--primary)'
           }}
-          onClick={onOpenClaim}
+          onClick={onOpenPaywall}
         >
-          <ShieldAlert size={13} />
-          <span>File Claim ⚖️</span>
+          <Crown size={13} />
+          <span>{isPro ? "Pro Active ✓" : "Unlock Pro"}</span>
         </button>
 
         <button

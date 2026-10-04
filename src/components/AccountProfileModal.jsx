@@ -8,7 +8,6 @@ export default function AccountProfileModal({
   user,
   isPro,
   onOpenPaywall,
-  onOpenClaim,
   onLogout,
   itemsCount,
   warrantiesCount,
@@ -123,29 +122,27 @@ export default function AccountProfileModal({
           </div>
 
           {/* Subscription Status Card */}
-          {/* Smart Claim & Dispute Protection Section */}
           <div className="glass-card" style={{ padding: 14 }}>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
               <div>
                 <div style={{ fontSize: 13, fontWeight: 700, color: 'var(--text-primary)', display: 'flex', alignItems: 'center', gap: 6 }}>
-                  <span>⚖️</span>
-                  <span>Smart Claim & Dispute Protection</span>
+                  <Crown size={15} color={isPro ? 'var(--warning)' : 'var(--text-muted)'} />
+                  <span>{isPro ? 'LifeProof Pro Subscription' : 'LifeProof Free Tier'}</span>
                 </div>
                 <div style={{ fontSize: 11, color: 'var(--text-muted)', marginTop: 2 }}>
-                  Automated warranty claims & legal dispute packets active
+                  {isPro ? 'Unlimited items & AI reports active' : 'Limited to 5 items • Basic comparisons'}
                 </div>
               </div>
 
               <button
                 onClick={() => {
                   onClose();
-                  if (onOpenClaim) onOpenClaim();
-                  else if (onOpenPaywall) onOpenPaywall();
+                  onOpenPaywall();
                 }}
-                className="btn-primary"
-                style={{ padding: '6px 12px', fontSize: 11, background: 'linear-gradient(135deg, #EF4444 0%, #F59E0B 100%)', color: '#fff' }}
+                className="btn-secondary"
+                style={{ padding: '6px 12px', fontSize: 11 }}
               >
-                File Claim
+                {isPro ? 'Manage' : 'Upgrade'}
               </button>
             </div>
           </div>

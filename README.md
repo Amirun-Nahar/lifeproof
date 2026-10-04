@@ -20,7 +20,7 @@ The app comes with an interactive top **Pitch Flow Ribbon** designed specificall
 | **1:20** | **5. Visual Timeline** | Item Profile | Chronological tree: Purchased ➔ Baseline Scan ➔ Repair ➔ 6-Month Check ➔ Warranty Expiration. |
 | **1:35** | **6. Ask My Stuff** | AI Memory Assistant | Natural language query: *"Which warranties expire this month?"* or *"When was my laptop last repaired?"* with linked item cards. |
 | **1:45** | **7. Evidence Report** | Certified Condition Report | Official stamped report with SHA-256 cryptographic seal, Before/After photos, and **Export PDF** / Print button. |
-| **1:50** | **7. Claim Dispatcher** | Smart Dispute & Warranty Dispatch | Auto-generate formal warranty claims, landlord deposit dispute packets, and carrier damage claims with SHA-256 seal & copy/dispatch actions. |
+| **1:50** | **8. RevenueCat Paywall** | LifeProof Pro Modal | Monthly ($4.99/mo), Annual ($39.99/yr), and Lifetime ($89.99). **Judges unlock instantly with promo code: `HACKATHON2026` (or `JUDGES`)!** |
 
 ---
 
@@ -30,7 +30,7 @@ The app comes with an interactive top **Pitch Flow Ribbon** designed specificall
 - **Styling**: Vanilla CSS Design Tokens (Apple Health × Notion × Linear × Modern Fintech)
 - **Typography**: Sora & Space Grotesk (Headings), Inter (Body), JetBrains Mono (Numbers/Tech)
 - **AI Vision Engine**: Hybrid Google Gemini Multimodal Vision API (1.5 Flash / 2.0 Flash) + Offline instant response engine
-- **Dispute Engine**: Smart Claim & Dispute Dispatcher (Automated legal wording, cryptographic proof packaging, and instant dispatch simulation)
+- **Monetization**: RevenueCat SDK Architecture & Paywall flow (Free vs Pro $4.99/mo vs Lifetime)
 - **View Modes**: Toggleable **iPhone 16 Pro Mockup Frame** (with Dynamic Island) or **Full Responsive Desktop Mode**
 
 ---
@@ -48,10 +48,10 @@ npm run dev
 http://localhost:5173/
 ```
 
-### ⚖️ Smart Claim & Dispute Dispatcher:
-- Tap **File Claim ⚖️** on the top pitch ribbon or inside any item profile
-- Choose between **Warranty Claim**, **Shipping Damage**, **Deposit Dispute**, or **Lease Return**
-- Copy the pre-formatted formal legal dispute letter, export as PDF, or dispatch with cryptographic seal!
+### Pro Promo Code for Evaluators & Judges:
+- Open **Unlock Pro** or the Paywall modal
+- Enter code: `HACKATHON2026` (or `JUDGES`)
+- Tap **Apply** to trigger celebratory confetti and unlock Pro entitlements!
 
 ---
 
