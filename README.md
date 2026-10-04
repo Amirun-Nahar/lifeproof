@@ -26,7 +26,7 @@
 
 ## 📌 Executive Summary
 
-We invest thousands of dollars into laptops, smartphones, leased vehicles, rented apartments, and delivered parcels. Yet when dispute strikes—a landlord withholds a security deposit, an online shipment arrives crushed, or hardware fails right at warranty expiration—**consumers lack objective, verifiable proof**. Receipts vanish into email inboxes, photos get buried in camera rolls, and claim adjusters reject unsupported claims.
+We invest thousands of dollars into laptops, smartphones, leased vehicles, rented apartments, and delivered parcels. Yet when dispute strikes a landlord withholds a security deposit, an online shipment arrives crushed, or hardware fails right at warranty expiration **consumers lack objective, verifiable proof**. Receipts vanish into email inboxes, photos get buried in camera rolls, and claim adjusters reject unsupported claims.
 
 **LIFEProof** bridges this gap by creating an AI-powered visual memory vault for your physical possessions. Powered by **Google Gemini Multimodal Vision AI**, LIFEProof establishes baseline condition audits, actively tracks warranty expirations, isolates micro-damage via draggable comparison sliders, and produces **SHA-256 cryptographically certified evidence reports**.
 
@@ -41,7 +41,7 @@ We invest thousands of dollars into laptops, smartphones, leased vehicles, rente
    Human-in-the-Loop Safeguards     Automated Expiration Alerts     Legal Dispute Evidence Pack
 ```
 
-1. **Capture It (AI Vision Scanner)**: Real-time radar scan sweeps across images to detect objects, surface defects, micro-scratches, and dents. Adheres to **Rule 5: AI suggests, user confirms**—ensuring users retain absolute ownership over legal documentation.
+1. **Capture It (AI Vision Scanner)**: Real-time radar scan sweeps across images to detect objects, surface defects, micro-scratches, and dents. Adheres to **Rule 5: AI suggests, user confirms** ensuring users retain absolute ownership over legal documentation.
 2. **Track It (Warranty Radar & Timeline)**: Proactively monitors warranty deadlines with color-coded urgency banners (e.g., *Sony WH-1000XM5 in 42 days*). Every asset maintains an append-only chronological history (Purchase ➔ Inspection ➔ Repair ➔ Warranty).
 3. **Prove It (Interactive Split Slider & Certified Reports)**: Draggable comparison slider visually isolates physical changes between baseline and current state. Generates tamper-evident condition reports sealed with cryptographic SHA-256 hashes.
 
