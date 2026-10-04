@@ -14,8 +14,6 @@
 
   <br/>
 
-  <a href="https://amirun-nahar.github.io/lifeproof/"><strong>🌐 Explore Live Web Application »</strong></a>
-
 </div>
 
 ---
