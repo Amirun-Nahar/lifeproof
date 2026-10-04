@@ -20,6 +20,10 @@
 
 ---
 
+## Live Link: https://lifeproof-beige.vercel.app/
+
+---
+
 ## 📌 Executive Summary
 
 We invest thousands of dollars into laptops, smartphones, leased vehicles, rented apartments, and delivered parcels. Yet when dispute strikes a landlord withholds a security deposit, an online shipment arrives crushed, or hardware fails right at warranty expiration **consumers lack objective, verifiable proof**. Receipts vanish into email inboxes, photos get buried in camera rolls, and claim adjusters reject unsupported claims.
