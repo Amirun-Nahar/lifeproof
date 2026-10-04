@@ -69,8 +69,8 @@ export default function AuthModal({
         };
       } else if (type === 'judge') {
         authUser = {
-          name: 'Shipaton Judge',
-          email: 'judge@shipaton.org',
+          name: 'Hackathon Judge',
+          email: 'judge@hackathon.org',
           avatar: 'J',
           role: 'VIP Evaluator',
           loginTime: new Date().toLocaleTimeString()
@@ -180,7 +180,7 @@ export default function AuthModal({
                   gridColumn: 'span 2'
                 }}
               >
-                ⚖️ Shipaton Judge (VIP Evaluator)
+                ⚖️ Hackathon Judge (VIP Evaluator)
               </button>
             </div>
           </div>

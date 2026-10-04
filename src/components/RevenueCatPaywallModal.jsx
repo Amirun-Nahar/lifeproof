@@ -39,7 +39,7 @@ export default function RevenueCatPaywallModal({
   const handleApplyPromo = (e) => {
     e.preventDefault();
     const cleanCode = promoCode.trim().toUpperCase();
-    if (['SHIPATON', 'SHIPATON2026', 'JUDGE', 'JUDGES', 'DEMO', 'VIP'].includes(cleanCode)) {
+    if (['HACKATHON', 'HACKATHON2026', 'JUDGE', 'JUDGES', 'DEMO', 'VIP', 'PROMO', 'PROMO2026'].includes(cleanCode)) {
       setIsPro(true);
       localStorage.setItem('lifeproof_pro_entitlement', 'true');
       setPromoError('');
@@ -48,7 +48,7 @@ export default function RevenueCatPaywallModal({
         onClose();
       }, 1000);
     } else {
-      setPromoError('Invalid promo code. For judges: use code SHIPATON2026');
+      setPromoError('Invalid promo code. For judges: use code JUDGES or HACKATHON2026');
     }
   };
 
@@ -306,7 +306,7 @@ export default function RevenueCatPaywallModal({
           >
             <input
               type="text"
-              placeholder="Promo code (e.g. SHIPATON2026)"
+              placeholder="Promo code (e.g. JUDGES or HACKATHON2026)"
               value={promoCode}
               onChange={(e) => {
                 setPromoCode(e.target.value);

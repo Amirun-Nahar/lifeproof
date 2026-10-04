@@ -2,7 +2,7 @@
 > **Your personal memory for the things you own.**  
 > *Capture it. Track it. Prove it.*
 
-🌐 **Live Deployed App:** [https://heckathon/lifeproof/](https://heckathon/lifeproof/)  
+🌐 **Live Deployed App:** [https://amirun-nahar.github.io/lifeproof/](https://amirun-nahar.github.io/lifeproof/)  
 📱 **Responsive View:** Supports iPhone 16 Pro mockup frame and full desktop view.
 
 ---
@@ -20,7 +20,7 @@ The app comes with an interactive top **Pitch Flow Ribbon** designed specificall
 | **1:20** | **5. Visual Timeline** | Item Profile | Chronological tree: Purchased ➔ Baseline Scan ➔ Repair ➔ 6-Month Check ➔ Warranty Expiration. |
 | **1:35** | **6. Ask My Stuff** | AI Memory Assistant | Natural language query: *"Which warranties expire this month?"* or *"When was my laptop last repaired?"* with linked item cards. |
 | **1:45** | **7. Evidence Report** | Certified Condition Report | Official stamped report with SHA-256 cryptographic seal, Before/After photos, and **Export PDF** / Print button. |
-| **1:50** | **8. RevenueCat Paywall** | LifeProof Pro Modal | Monthly ($4.99/mo), Annual ($39.99/yr), and Lifetime ($89.99). **Judges unlock instantly with promo code: `SHIPATON2026`!** |
+| **1:50** | **8. RevenueCat Paywall** | LifeProof Pro Modal | Monthly ($4.99/mo), Annual ($39.99/yr), and Lifetime ($89.99). **Judges unlock instantly with promo code: `HACKATHON2026` (or `JUDGES`)!** |
 
 ---
 
@@ -50,7 +50,7 @@ http://localhost:5173/
 
 ### Pro Promo Code for Evaluators & Judges:
 - Open **Unlock Pro** or the Paywall modal
-- Enter code: `SHIPATON2026` (or `JUDGES`)
+- Enter code: `HACKATHON2026` (or `JUDGES`)
 - Tap **Apply** to trigger celebratory confetti and unlock Pro entitlements!
 
 ---

@@ -33,7 +33,7 @@ export default function DemoWalkthroughBar({
             WebkitTextFillColor: 'transparent'
           }}>Proof</span>
         </span>
-        <span style={{ fontSize: 10, color: 'var(--text-muted)', fontFamily: 'var(--font-mono)' }}>v1.0 • SHIPATON</span>
+        <span style={{ fontSize: 10, color: 'var(--text-muted)', fontFamily: 'var(--font-mono)' }}>v1.0 • Hackathon 2026</span>
       </div>
 
       <div className="demo-flow-pills">
