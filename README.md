@@ -159,9 +159,9 @@ A production deployment workflow is already committed in [`.github/workflows/dep
 
 ## 👥 Project Team & Partners
 
-* **Nahar** ([@Amirun-Nahar](https://github.com/Amirun-Nahar)) — *Owner, Lead Architecture & Engineering*  
+* **Nahar** ([@Amirun-Nahar](https://github.com/Amirun-Nahar)) — *Architecture & Engineering*  
   `naharamina68@gmail.com`
-* **Farhan Hamim** ([@FarhanHamim](https://github.com/FarhanHamim)) — *Co-Owner, Product Partner & Design*  
+* **Farhan Hamim** ([@FarhanHamim](https://github.com/FarhanHamim)) — *Product Partner & Design*  
   `farhanhamim2001@gmail.com`
 
 ---
