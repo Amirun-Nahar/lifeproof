@@ -9,6 +9,7 @@ export default function Header({
   onOpenNotifications,
   isPro,
   onOpenPaywall,
+  onOpenClaim,
   onOpenItem,
   user,
   onOpenProfile,

@@ -8,6 +8,7 @@ export default function AccountProfileModal({
   user,
   isPro,
   onOpenPaywall,
+  onOpenClaim,
   onLogout,
   itemsCount,
   warrantiesCount,

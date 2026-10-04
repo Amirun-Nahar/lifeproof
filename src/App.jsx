@@ -18,18 +18,31 @@ import { INITIAL_ITEMS, SMART_NOTIFICATIONS } from './data/mockData';
 
 export default function App() {
   const [items, setItems] = useState(() => {
-    const saved = localStorage.getItem('lifeproof_items');
-    return saved ? JSON.parse(saved) : INITIAL_ITEMS;
+    try {
+      const saved = localStorage.getItem('lifeproof_items');
+      return saved ? JSON.parse(saved) : INITIAL_ITEMS;
+    } catch {
+      return INITIAL_ITEMS;
+    }
   });
 
   const [user, setUser] = useState(() => {
-    const saved = localStorage.getItem('lifeproof_auth_user');
-    return saved ? JSON.parse(saved) : {
-      name: 'Nahar',
-      email: 'naharamina68@gmail.com',
-      avatar: 'N',
-      role: 'Owner'
-    };
+    try {
+      const saved = localStorage.getItem('lifeproof_auth_user');
+      return saved ? JSON.parse(saved) : {
+        name: 'Nahar',
+        email: 'naharamina68@gmail.com',
+        avatar: 'N',
+        role: 'Owner'
+      };
+    } catch {
+      return {
+        name: 'Nahar',
+        email: 'naharamina68@gmail.com',
+        avatar: 'N',
+        role: 'Owner'
+      };
+    }
   });
 
   const [notifications, setNotifications] = useState(SMART_NOTIFICATIONS);
@@ -432,7 +445,8 @@ export default function App() {
         onClose={() => setIsProfileModalOpen(false)}
         user={user}
         isPro={isPro}
-        onOpenPaywall={() => setIsPaywallOpen(true)}
+        onOpenClaim={() => setIsClaimOpen(true)}
+        onOpenPaywall={() => setIsClaimOpen(true)}
         onLogout={handleLogout}
         itemsCount={items.length}
         warrantiesCount={items.filter((i) => i.warrantyDaysLeft !== null).length}
