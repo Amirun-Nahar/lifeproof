@@ -8,6 +8,7 @@ export default function ItemDetailModal({
   onOpenCompare,
   onOpenAskAI,
   onOpenReport,
+  onOpenClaim,
   onAddConditionCheck,
   onDeleteItem,
   onDeleteTimelineEvent
@@ -269,6 +270,19 @@ export default function ItemDetailModal({
             >
               <FileText size={14} color="var(--success)" />
               <span>Report</span>
+            </button>
+
+            <button
+              className="btn-secondary"
+              onClick={() => {
+                onClose();
+                if (onOpenClaim) onOpenClaim(item.id);
+              }}
+              style={{ padding: '9px 10px', fontSize: 12, borderColor: 'var(--danger)', color: 'var(--danger)' }}
+              title="File formal warranty or dispute claim"
+            >
+              <span>⚖️</span>
+              <span>Claim</span>
             </button>
           </div>
 

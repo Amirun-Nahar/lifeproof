@@ -33,19 +33,15 @@ export default function Header({
       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
           <LifeProofLogo size={40} showText={true} showTagline={true} />
-          {isPro ? (
-            <span className="badge badge-success" style={{ fontSize: 9, padding: '2px 6px', alignSelf: 'flex-start', marginTop: 2 }}>
-              PRO
-            </span>
-          ) : (
-            <span
-              className="badge badge-primary"
-              onClick={onOpenPaywall}
-              style={{ fontSize: 9, padding: '2px 6px', cursor: 'pointer', alignSelf: 'flex-start', marginTop: 2 }}
-            >
-              FREE
-            </span>
-          )}
+          <span
+            className="badge badge-primary"
+            onClick={onOpenClaim || onOpenPaywall}
+            style={{ fontSize: 9, padding: '2px 8px', cursor: 'pointer', alignSelf: 'flex-start', marginTop: 2, display: 'flex', alignItems: 'center', gap: 4 }}
+            title="Open Smart Claim & Dispute Dispatcher"
+          >
+            <span>⚖️</span>
+            <span>CLAIMS</span>
+          </span>
         </div>
 
         <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>

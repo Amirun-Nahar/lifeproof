@@ -122,27 +122,29 @@ export default function AccountProfileModal({
           </div>
 
           {/* Subscription Status Card */}
+          {/* Smart Claim & Dispute Protection Section */}
           <div className="glass-card" style={{ padding: 14 }}>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
               <div>
                 <div style={{ fontSize: 13, fontWeight: 700, color: 'var(--text-primary)', display: 'flex', alignItems: 'center', gap: 6 }}>
-                  <Crown size={15} color={isPro ? 'var(--warning)' : 'var(--text-muted)'} />
-                  <span>{isPro ? 'LifeProof Pro Subscription' : 'LifeProof Free Tier'}</span>
+                  <span>⚖️</span>
+                  <span>Smart Claim & Dispute Protection</span>
                 </div>
                 <div style={{ fontSize: 11, color: 'var(--text-muted)', marginTop: 2 }}>
-                  {isPro ? 'Unlimited items & AI reports active' : 'Limited to 5 items • Basic comparisons'}
+                  Automated warranty claims & legal dispute packets active
                 </div>
               </div>
 
               <button
                 onClick={() => {
                   onClose();
-                  onOpenPaywall();
+                  if (onOpenClaim) onOpenClaim();
+                  else if (onOpenPaywall) onOpenPaywall();
                 }}
-                className="btn-secondary"
-                style={{ padding: '6px 12px', fontSize: 11 }}
+                className="btn-primary"
+                style={{ padding: '6px 12px', fontSize: 11, background: 'linear-gradient(135deg, #EF4444 0%, #F59E0B 100%)', color: '#fff' }}
               >
-                {isPro ? 'Manage' : 'Upgrade'}
+                File Claim
               </button>
             </div>
           </div>

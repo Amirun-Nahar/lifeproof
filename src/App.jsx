@@ -8,7 +8,7 @@ import ItemDetailModal from './components/ItemDetailModal';
 import ComparisonModal from './components/ComparisonModal';
 import AskMyStuffModal from './components/AskMyStuffModal';
 import EvidenceReportModal from './components/EvidenceReportModal';
-import RevenueCatPaywallModal from './components/RevenueCatPaywallModal';
+import ClaimDispatcherModal from './components/ClaimDispatcherModal';
 import SettingsModal from './components/SettingsModal';
 import OnboardingModal from './components/OnboardingModal';
 import DemoWalkthroughBar from './components/DemoWalkthroughBar';
@@ -49,7 +49,7 @@ export default function App() {
   const [compareItemId, setCompareItemId] = useState(null);
   const [reportItem, setReportItem] = useState(null);
   const [isAskModalOpen, setIsAskModalOpen] = useState(false);
-  const [isPaywallOpen, setIsPaywallOpen] = useState(false);
+  const [isClaimOpen, setIsClaimOpen] = useState(false);
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
   const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
   const [isProfileModalOpen, setIsProfileModalOpen] = useState(false);
@@ -194,8 +194,8 @@ export default function App() {
     } else if (stepId === 'report') {
       const apt = items.find((i) => i.id === 'item-apartment-4b') || items[0];
       setReportItem(apt);
-    } else if (stepId === 'paywall') {
-      setIsPaywallOpen(true);
+    } else if (stepId === 'claim' || stepId === 'paywall') {
+      setIsClaimOpen(true);
     }
   };
 
@@ -220,8 +220,7 @@ export default function App() {
         currentStep={activeTab}
         isDesktopView={isDesktopView}
         setIsDesktopView={setIsDesktopView}
-        isPro={isPro}
-        onOpenPaywall={() => setIsPaywallOpen(true)}
+        onOpenClaim={() => setIsClaimOpen(true)}
         onOpenSettings={() => setIsSettingsOpen(true)}
       />
 
@@ -280,7 +279,8 @@ export default function App() {
             notifications={notifications}
             onOpenNotifications={() => { }}
             isPro={isPro}
-            onOpenPaywall={() => setIsPaywallOpen(true)}
+            onOpenPaywall={() => setIsClaimOpen(true)}
+            onOpenClaim={() => setIsClaimOpen(true)}
             onOpenItem={(id) => setSelectedItemId(id)}
             user={user}
             onOpenProfile={() => setIsProfileModalOpen(true)}
@@ -371,6 +371,10 @@ export default function App() {
           setIsAskModalOpen(true);
         }}
         onOpenReport={(item) => setReportItem(item)}
+        onOpenClaim={(id) => {
+          setSelectedItemId(null);
+          setIsClaimOpen(true);
+        }}
         onAddConditionCheck={() => {
           setSelectedItemId(null);
           setIsAddModalOpen(true);
@@ -401,11 +405,11 @@ export default function App() {
         onClose={() => setReportItem(null)}
       />
 
-      <RevenueCatPaywallModal
-        isOpen={isPaywallOpen}
-        onClose={() => setIsPaywallOpen(false)}
-        isPro={isPro}
-        setIsPro={setIsPro}
+      <ClaimDispatcherModal
+        isOpen={isClaimOpen}
+        onClose={() => setIsClaimOpen(false)}
+        items={items}
+        user={user}
       />
 
       <SettingsModal
