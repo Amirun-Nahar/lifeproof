@@ -15,10 +15,6 @@
   <br/>
 
   <a href="https://amirun-nahar.github.io/lifeproof/"><strong>🌐 Explore Live Web Application »</strong></a>
-  &nbsp;&nbsp;•&nbsp;&nbsp;
-  <a href="#-pitch--demo-walkthrough-2-minute-video-flow"><strong>🎬 2-Minute Demo Script »</strong></a>
-  &nbsp;&nbsp;•&nbsp;&nbsp;
-  <a href="#-getting-started-locally"><strong>🚀 Run Locally »</strong></a>
 
 </div>
 
@@ -47,22 +43,6 @@ We invest thousands of dollars into laptops, smartphones, leased vehicles, rente
 
 ---
 
-## 🎬 Pitch & Demo Walkthrough (2-Minute Video Flow)
-
-The application features an interactive top **Pitch Flow Ribbon** designed specifically for judging, evaluators, and presentation recordings:
-
-| Time | Chapter | Screen / Action | WOW Feature & Technical Highlight |
-|:---:|:---|:---|:---|
-| **0:00** | **1. Problem & Home** | Home Dashboard | Real-time portfolio metrics (12 Items, 4 Warranties, 2 Attention), urgent warranty radar banner. |
-| **0:15** | **2. Smart AI Capture** | Add Record Flow | Category selector (Home, Electronics, Vehicle, Package), instant demo presets & live camera intake. |
-| **0:30** | **3. AI Condition Scan** | Laser Scanner View | Real-time radar sweep, bounding box defect tagging, condition scoring with user confirmation gate. |
-| **1:00** | **4. WOW: Before/After** | Draggable Comparison Slider | **Hero Interaction**: Split slider between Aug 12 baseline & Oct 01 check (`🔴 1 New wall scratch`, `🟢 2 Unchanged`). |
-| **1:20** | **5. Visual Timeline** | Item Profile | Chronological event tree: Purchased ➔ Baseline Scan ➔ Dealership Service ➔ Warranty Deadline. |
-| **1:35** | **6. Ask My Stuff** | AI Memory Assistant | Natural language query: *"Which warranties expire this month?"* or *"When was my laptop serviced?"* |
-| **1:45** | **7. Evidence Report** | Certified Condition Report | Official stamped documentation with SHA-256 cryptographic seal, Before/After photos, and **Export PDF** / Print. |
-| **1:50** | **8. RevenueCat Paywall** | LifeProof Pro Modal | Tier architecture: Free vs Monthly ($4.99) vs Annual ($39.99) vs Lifetime ($89.99). **Evaluator Code: `HACKATHON2026`!** |
-
----
 
 ## 📸 Key Features & Capabilities
 
@@ -157,42 +137,6 @@ lifeproof/
 ├── package.json
 ├── vite.config.js                # Build configuration with relative asset base
 └── README.md
-```
-
----
-
-## 🚀 Getting Started Locally
-
-### Prerequisites
-- Node.js `20.x` or higher
-- npm `10.x` or higher
-
-### Installation & Launch
-
-1. **Clone the repository**:
-   ```bash
-   git clone https://github.com/Amirun-Nahar/lifeproof.git
-   cd lifeproof
-   ```
-
-2. **Install dependencies**:
-   ```bash
-   npm install
-   ```
-
-3. **Start the development server**:
-   ```bash
-   npm run dev
-   ```
-
-4. **Open in your browser**:
-   Navigate to [http://localhost:5173/](http://localhost:5173/) to view the running application.
-
-### Production Build
-To validate the production bundle:
-```bash
-npm run build
-npm run preview
 ```
 
 ---
